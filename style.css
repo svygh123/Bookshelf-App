@@ -1,0 +1,265 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  line-height: 1.75;
+}
+
+body {
+  background-color: #fff;
+  color: #55555f;
+  font-family: "Poppins", Sans-Serif !important;
+  font-size: 0.9rem;
+}
+
+/*    Tambahan     */
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+.wrapper_grid {
+  display: grid;
+  grid-template-columns: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.wrapper_grid .left {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.wrapper_grid .right {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.info {
+  position: fixed;
+  z-index: 2000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  max-width: 250px;
+  background-color: transparent;
+  color: transparent;
+  transition: all .25s ease-in-out;
+  transform: translateX(300px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.info.alert {
+ /* opacity: 1;
+  visibility: visible; */
+  background-color: red;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255,0,0,.25);
+}
+
+.info.success {
+ /* opacity: 1;
+  visibility: visible; */
+  background-color: #00de00;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0,222,0,.25);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper_grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+  .wrapper_grid .left,
+.wrapper_grid .right {
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+
+/*    Typography     */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #00000f;
+  margin: 0.5rem 0;
+  letter-spacing: -0.025rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+small {
+  font-size: 0.7rem;
+  display: block;
+}
+
+.style {
+  padding: 0.75rem 0;
+  display: block;
+}
+
+
+/*    Header     */
+header {
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  padding: 1rem 0;
+  background-color: #00000f;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+header h1 {
+  color: #fff;
+  margin: 0;
+}
+
+
+/*    Section, Grid    */
+section {
+  border-radius: 0.5rem;
+  border: 0.05rem solid #ddd;
+  margin-bottom: 0.75rem;
+  padding: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.grid_item {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 0.05rem solid #00000f;
+  position: relative;
+  background-color: #22242f;
+}
+.grid_item:not(:last-child) {
+  margin-bottom: 0.65rem;
+}
+.grid_item h3 {
+  color: #fff;
+}
+.grid_item small {
+  color: #cccccf;
+}
+.grid_item .actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.grid_item .actions button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+}
+.grid_item .actions button.delete {
+  font-weight: 700;
+  border: 0.05rem solid red;
+  background-color: transparent;
+  color: red;
+  transition: all 0.25s ease-in-out;
+}
+.grid_item .actions button.delete:hover {
+  background-color: red;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
+}
+.grid_item .actions button.unread {
+  font-weight: 700;
+  border: 0.05rem solid orange;
+  background-color: transparent;
+  color: orange;
+  transition: all 0.25s ease-in-out;
+}
+.grid_item .actions button.unread:hover {
+  background-color: orange;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.25);
+}
+.grid_item .actions button.read {
+  font-weight: 700;
+  border: 0.05rem solid #0333fb;
+  background-color: transparent;
+  color: #0333fb;
+  transition: all 0.25s ease-in-out;
+}
+.grid_item .actions button.read:hover {
+  background-color: #0333fb;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(3, 51, 251, 0.25);
+}
+
+
+/*    Input, Button     */
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.form-group .checkbox {
+  margin: 0 0.5rem;
+}
+
+.form-input {
+  font-family: inherit;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border: 0.05rem solid #ddd;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.25s ease-in-out;
+}
+.form-input:hover, .form-input:focus {
+  border-color: #0333fb;
+}
+
+.btn {
+  width: 100%;
+  font-family: inherit;
+  margin: 0.5rem 0;
+  border: 0.05rem solid #0333fb;
+  background-color: transparent;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease-in-out;
+  color: #0333fb;
+  font-size: 0.9rem;
+}
+.btn:hover {
+  background-color: #0333fb;
+  color: #fff;
+}
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(3, 51, 251, 0.25);
+}

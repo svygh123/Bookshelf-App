@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf App</title>
+  <!-- Stylesheet, Google Font, Font Awesome -->
+  <link rel="stylesheet" href="style.css" media="all">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="all">
+</head>
+<body>
+  <div class="wrapper">
+    <!--   Header   -->
+    <header> 
+      <h1>Bookshelf App</h1>
+    </header>
+    
+    <main class="wrapper_grid">
+      <div class="left">
+        <!--   Input   -->
+        <section class="input_section">
+          <h2>Masukkan Buku Baru.</h2>
+          <input type="text" placeholder="Judul Buku" class="form-input" id="inputBookTitle">
+          <input type="text" placeholder="Penulis Buku" class="form-input" id="inputBookAuthor">
+          <input type="number" class="form-input" placeholder="Tahun Buku" id="inputBookYear">
+          <div class="form-group">
+            <span>Sudah baca?</span>
+            <input type="checkbox" class="checkbox" id="inputBookStatus" />
+          </div>
+          
+          <button class="btn" id="inputBook">Masukkan Buku</button>
+        </section>
+        
+        <!--   Search   -->
+        <section class="search_section">
+          <h2>Cari Buku.</h2>
+          <input type="text" class="form-input" placeholder="Cari Judul Buku / Penulis" id="inputSearchBook">
+          
+          <div class="grid" id="searchBook">
+            
+          </div>
+        </section>
+        
+      </div>
+      
+      <div class="right">
+        
+        <!--   Belum Dibaca   -->
+        <section class="book_section">
+          <h2>Belum Dibaca.</h2>
+          
+          <div class="grid" id="unreadBook">
+            <!-- 
+            <div class="grid_item">
+              <h3>Harimi</h3>
+              <small>Author: <b>Unknown</b></small>
+              <small>Tahun: <b>2021</b></small>
+              <small>Status: <b>Sudah Dibaca</b></small>
+              <div class="actions">
+                <button class="read"><i class="fas fa-check"></i></button>
+                <button class="delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </div>
+             -->
+          </div>
+        </section>
+        
+        <!--   Sudah Dibaca   -->
+        <section class="book_section">
+          <h2>Sudah Dibaca.</h2>
+          
+          <div class="grid" id="readedBook">
+            
+            <!-- 
+            <div class="grid_item">
+              <h3>Harikuu</h3>
+              <small>Author: <b>Unknown</b></small>
+              <small>Tahun: <b>2021</b></small>
+              <small>Status: <b>Sudah Dibaca</b></small>
+              <div class="actions">
+                <button class="unread"><i class="fas fa-times"></i></button>
+                <button class="delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </div> -->
+            
+          </div>
+        </section>
+        
+      </div>
+    </main>
+  </div>
+  
+  <!-- Javascript -->
+  <script src="main.js"></script>
+</body>
+</html>
