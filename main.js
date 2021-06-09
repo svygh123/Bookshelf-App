@@ -75,7 +75,7 @@ function readedBook(i,t,a,y,s) {
       <small>Status: <b>Sudah Dibaca</b></small>
       <div class="actions">
         <button class="unread" onclick="return changeStatus('${i}')"><i class="fas fa-times"></i></button>
-        <button class="delete" onclick="return deleteBook('${i}'),infoo("alert","Buku berhasil dihapus")"><i class="fas fa-trash"></i></button>
+        <button class="delete" onclick="return deleteBook('${i}'),infoo('alert','Buku berhasil dihapus')"><i class="fas fa-trash"></i></button>
       </div>
     </div> `;
     
